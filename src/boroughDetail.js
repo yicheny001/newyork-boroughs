@@ -18,7 +18,7 @@ class BoroughDetail extends Component {
     </h4>
       <Collapse in={this.state.open}>
         <div>
-          <MappingCounter mappings={this.props.borough.mappings}/>
+          <MappingCounter mappings={this.props.borough.mappings} borough={this.props.borough.borough.name}/>
         </div>
       </Collapse>
     </div>

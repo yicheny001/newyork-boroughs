@@ -3,7 +3,7 @@ import {ListGroupItem} from 'react-bootstrap'
 
 class Neighborhood extends Component {
   showBorough(event){
-    let borough = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.firstChild.id
+    let borough = this.props.borough
     this.changeBoroughCss(borough)
   }
 

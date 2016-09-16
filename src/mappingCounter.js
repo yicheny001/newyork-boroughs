@@ -14,7 +14,7 @@ class MappingCounter extends Component {
     else{
       return(
         <div>
-        {this.props.mappings.map((macro)=>{return <Macro macro={macro}/>})}
+        {this.props.mappings.map((macro)=>{return <Macro macro={macro} borough={this.props.borough}/>})}
         </div>
       )
     }
@@ -24,7 +24,7 @@ class MappingCounter extends Component {
     if(this.props.mappings[0].neighborhoods.length !== 1)
     {
       return( <ListGroup>
-        {this.props.mappings[0].neighborhoods.map((neighborhood)=>{return <Neighborhood neighborhood={neighborhood} />})}
+        {this.props.mappings[0].neighborhoods.map((neighborhood)=>{return <Neighborhood neighborhood={neighborhood} borough={this.props.borough}/>})}
         </ListGroup>
       )
     }

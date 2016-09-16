@@ -2,13 +2,39 @@ import React, {Component} from 'react';
 import BoroughDetail from './boroughDetail'
 
 class BoroughList extends Component {
+
   constructor(props){
     super(props)
     let json = require('./locationResponse.json').data
-    let sortedJson = json.sort(function(a, b){
-      return b.length - a.length;
-    });
-    this.state = { allBoroughs : sortedJson }
+    let sortedBoroughs = json.sort(this.compareBoroughs())
+    let sortedNeighborhoods = sortedBoroughs.map((borough)=>{
+      if(borough.mappings.length===1){
+        return borough
+      }
+      else{
+        return borough.mappings.sort(this.compareNeighborhoods())
+      }
+    })
+    this.state = { allBoroughs : sortedBoroughs }
+    }
+
+  weightBorough(borough){
+    return borough.mappings.map((mapping)=>{
+      return mapping.neighborhoods.length
+    }).reduce((a,b)=>a+b, 0)
+  }
+
+  weightNeighborhood(neighborhood){
+  }
+
+  compareBoroughs(boroughA,boroughB){
+    return (boroughA,boroughB)=>{
+      return this.weightBorough(boroughB) - this.weightBorough(boroughA)}
+  }
+
+  compareNeighborhoods(neighborhoodA,neighborhoodB){
+    return (a,b)=>{
+      return this.weightNeighborhood(b) - this.weightNeighborhood(a)}
   }
 
   tabSelect(borough){

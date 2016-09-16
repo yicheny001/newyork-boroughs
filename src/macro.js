@@ -7,7 +7,7 @@ class Macro extends Component {
   return (
     <div>
       <ListGroupItem bsStyle="success">{this.props.macro.macro.name}</ListGroupItem>
-      {this.props.macro.neighborhoods.map((neighborhood)=>{return <Neighborhood neighborhood={neighborhood}/>})}
+      {this.props.macro.neighborhoods.map((neighborhood)=>{return <Neighborhood neighborhood={neighborhood} borough={this.props.borough}/>})}
       <br />
     </div>
     )
