@@ -3,8 +3,12 @@
 - Area B : Only shows the borough names
 
 # WIP
-- Sorted JSON file
+- Sorting JSON file
 - Highlighting borough name upon clicking neighborhood 
+ 
+# Built with
+- React.js
+- React Bootstrap
 
 # Draft 1 Demo
 ![draft](http://g.recordit.co/UoLYCu67wB.gif)
