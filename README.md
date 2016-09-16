@@ -4,7 +4,7 @@
 
 # WIP
 - Sorting JSON file
-- Highlighting borough name upon clicking neighborhood 
+- Highlighting borough name upon clicking its neighborhood 
  
 # Built with
 - React.js
