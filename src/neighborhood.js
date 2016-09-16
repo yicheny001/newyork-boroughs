@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import {ListGroupItem} from 'react-bootstrap'
 
 class Neighborhood extends Component {

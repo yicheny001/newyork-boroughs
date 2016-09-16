@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import MappingCounter from './mappingCounter'
 import {Button, Collapse, Well} from 'react-bootstrap'
 

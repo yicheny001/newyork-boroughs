@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Neighborhood from './neighborhood'
 import Macro from './macro'
 import { ListGroup } from 'react-bootstrap'
 
 class MappingCounter extends Component {
-  
+
   checkMacro(){
     if(this.props.mappings.length === 1){
       return(
@@ -32,11 +31,11 @@ class MappingCounter extends Component {
   }
 
   render(props){
-  return (
-    <div>
-      {this.checkMacro()}
-    </div>
-    )
+    return (
+      <div>
+        {this.checkMacro()}
+      </div>
+      )
   }
 }
 
