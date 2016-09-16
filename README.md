@@ -1,5 +1,5 @@
-## Area A
+# Area A
 -Click on each borough to expand 
 
-## Area B
+# Area B
 -Only shows the borough names
