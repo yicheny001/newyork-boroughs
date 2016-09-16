@@ -4,7 +4,7 @@ import {ListGroupItem} from 'react-bootstrap'
 
 class Neighborhood extends Component {
   showBorough(event){
-    let borough = event.target.parentElement.parentElement.parentElement.parentElement.firstChild.innerHTML
+    let borough = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.firstChild.id
     this.changeBoroughCss(borough)
   }
 
@@ -16,7 +16,7 @@ class Neighborhood extends Component {
   render(props){
 
   return (
-    <ListGroupItem onClickCapture={this.showBorough.bind(this)}>{this.props.neighborhood.name}</ListGroupItem>
+    <ListGroupItem onClick={this.showBorough.bind(this)}>{this.props.neighborhood.name}</ListGroupItem>
     )
   }
 }
