@@ -5,3 +5,6 @@
 # WIP
 - Sorted JSON file
 - Highlighting borough name upon clicking neighborhood 
+
+![draft](http://g.recordit.co/UoLYCu67wB.gif)
+
