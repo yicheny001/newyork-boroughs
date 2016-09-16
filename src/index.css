@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Hind', sans-serif !important;
+  font-family: 'Muli', sans-serif !important;
   color: #1BBCF1 !important;
 }
 
@@ -11,6 +11,7 @@ a {
 
 h4 {
   color: #1BBCF1;
+  font-family: 'Muli', sans-serif !important;
 }
 
 .list-group-item-success {
