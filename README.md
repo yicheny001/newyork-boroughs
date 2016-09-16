@@ -6,5 +6,6 @@
 - Sorted JSON file
 - Highlighting borough name upon clicking neighborhood 
 
+# Draft 1 Demo
 ![draft](http://g.recordit.co/UoLYCu67wB.gif)
 
