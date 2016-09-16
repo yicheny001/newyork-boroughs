@@ -1,5 +1,5 @@
 # Tabs
-- Area A : Click on each borough name to expand and view its neighborhoods; macro neighborhoods are highlighed in light blue
+- Area A : Click on each borough name to view its neighborhoods; macro neighborhoods are highlighed in light blue
 - Area B : Only shows the borough names
 
 # WIP
