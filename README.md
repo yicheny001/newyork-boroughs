@@ -10,6 +10,6 @@
 - React.js
 - React Bootstrap
 
-# Draft 1 Demo
+# Draft 1 demo
 ![draft](http://g.recordit.co/UoLYCu67wB.gif)
 
