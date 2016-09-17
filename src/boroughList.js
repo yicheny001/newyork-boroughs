@@ -7,15 +7,17 @@ class BoroughList extends Component {
     super(props)
     let json = require('./locationResponse.json').data
     let sortedBoroughs = json.sort(this.compareBoroughs())
-    let sortedNeighborhoods = sortedBoroughs.map((borough)=>{
+    let sortedMacros = sortedBoroughs.map((borough)=>{
       if(borough.mappings.length===1){
         return borough
       }
       else{
-        return borough.mappings.sort(this.compareNeighborhoods())
+        let sortedMappings = borough.mappings.sort(this.compareMacros())
+        let newBorough = {borough:borough.borough, mappings:sortedMappings}
+        return newBorough
       }
     })
-    this.state = { allBoroughs : sortedBoroughs }
+    this.state = { allBoroughs : sortedMacros }
     }
 
   weightBorough(borough){
@@ -24,17 +26,18 @@ class BoroughList extends Component {
     }).reduce((a,b)=>a+b, 0)
   }
 
-  weightNeighborhood(neighborhood){
+  weightMacros(mapping){
+    return mapping.neighborhoods.length
   }
 
   compareBoroughs(boroughA,boroughB){
     return (boroughA,boroughB)=>{
-      return this.weightBorough(boroughB) - this.weightBorough(boroughA)}
+      return this.weightBorough(boroughA) - this.weightBorough(boroughB)}
   }
 
-  compareNeighborhoods(neighborhoodA,neighborhoodB){
-    return (a,b)=>{
-      return this.weightNeighborhood(b) - this.weightNeighborhood(a)}
+  compareMacros(macroA,macroB){
+    return (macroA,macroB)=>{
+      return this.weightMacros(macroA) - this.weightMacros(macroB) }
   }
 
   tabSelect(borough){
